@@ -3,10 +3,12 @@ using System.ComponentModel;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ServerControl1 {
+namespace ServerControl1
+{
     [DefaultProperty("Text")]
     [ToolboxData("<{0}:WelcomeLabel runat=server></{0}:WelcomeLabel>")]
-    public class WelcomeLabel : Label {
+    public class WelcomeLabel : Label
+    {
         [
         Bindable(true),
         Category("Appearance"),
@@ -16,7 +18,8 @@ namespace ServerControl1 {
         ]
         public String result = "0";
 
-        protected override void RenderContents(HtmlTextWriter writer) {
+        protected override void RenderContents(HtmlTextWriter writer)
+        {
             writer.WriteEncodedText(Text);
             writer.WriteEncodedText("Fibonacci Result: ");
             writer.WriteEncodedText(result);
